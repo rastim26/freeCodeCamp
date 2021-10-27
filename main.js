@@ -60,3 +60,4 @@ alert(alert(1) || 2 || alert(3)); // сначала 1, return: undefined, зат
 
 alert(1 && null && 2); // null
 alert(alert(1) && alert(2)); // 1, return: undefined
+alert(null || (2 && 3) || 4); // 3
