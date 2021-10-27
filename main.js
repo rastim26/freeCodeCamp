@@ -75,3 +75,17 @@ if (!(age >= 14 && age <= 90));
 if (-1 || 0) alert("first"); // "first", -1
 if (-1 && 0) alert("second"); // -, 0
 if (null || (-1 && 1)) alert("third"); // "third", 1
+
+//Проверка логина
+prompt("Ваш логин?", login);
+
+if (login === "Админ") {
+  prompt("Введите пароль:", pass);
+  if ((pass = "Я главный")) {
+    alert("Здравствуйте!");
+  } else {
+    alert("Не верный пароль");
+  }
+} else {
+  alert("Я вас не знаю");
+}
