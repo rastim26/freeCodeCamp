@@ -1,18 +1,17 @@
 //Проверка логина
-let login, pass;
-
-login = prompt("Кто там?");
+let login = prompt("Кто там?");
 
 if (login === "админ") {
-  pass = prompt("Пароль?");
+  let pass = prompt("Пароль?");
+
   if (pass === "главный") {
     alert("Здравствуйте!");
-  } else if (pass === null) {
+  } else if (pass === "" || pass === null) {
     alert("Отменено");
   } else {
     alert("Неверный пароль");
   }
-} else if (login === null) {
+} else if (login === "" || login === null) {
   alert("Отменено");
 } else {
   alert("Я вас не знаю");
