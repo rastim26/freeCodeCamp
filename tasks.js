@@ -1,7 +1,11 @@
 //Проверка логина
-prompt("Ваш логин?", login);
+let login, pass;
 
-if (login === "Админ") {
+login = prompt("Ваш логин?");
+
+if (login === null) {
+  alert("Отменено");
+} else if (login === "Админ") {
   prompt("Введите пароль:", pass);
   if ((pass = "Я главный")) {
     alert("Здравствуйте!");
