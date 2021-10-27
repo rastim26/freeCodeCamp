@@ -70,3 +70,8 @@ if (age >= 14 && age <= 90);
 //Проверка значения вне диапазона
 if (age < 14 || age > 90);
 if (!(age >= 14 && age <= 90));
+
+//Вопрос о "if"
+if (-1 || 0) alert("first"); // "first", -1
+if (-1 && 0) alert("second"); // -, 0
+if (null || (-1 && 1)) alert("third"); // "third", 1
