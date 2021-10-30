@@ -28,3 +28,11 @@ function checkAge(age) {
     return confirm("Родители разрешили?");
   }
 }
+// одинаково
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  }
+  // ...
+  return confirm("Родители разрешили?");
+}
