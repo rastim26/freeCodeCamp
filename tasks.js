@@ -36,3 +36,13 @@ function checkAge(age) {
   // ...
   return confirm("Родители разрешили?");
 }
+
+function checkAge(age) {
+  if (age > 18) {
+    return true || confirm("Родители разрешили?");
+  }
+}
+
+function checkAge(age) {
+  age > 18 ? return true : return confirm('Родители разрешили?');
+}
