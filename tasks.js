@@ -38,15 +38,15 @@ function checkAge(age) {
 }
 
 function checkAge(age) {
-   return age > 18 || confirm("Родители разрешили?");
+  return age > 18 || confirm("Родители разрешили?");
 }
 
 function checkAge(age) {
-  return (age > 18 ?  true : confirm('Родители разрешили?');)
+  return age > 18 ? true : confirm("Родители разрешили?");
 }
 
 function min(a, b) {
-  if(a < b) {
+  if (a < b) {
     return a;
   } else {
     return b;
@@ -54,12 +54,11 @@ function min(a, b) {
 }
 
 function min(a, b) {
- return a < b ? a : b;
+  return a < b ? a : b;
 }
 
-function pow(x,n) {
+function pow(x, n) {
   x = prompt("Ввведите число X:");
   n = prompt("Ввведите степень:");
-  return x**n;
+  return x ** n;
 }
-
