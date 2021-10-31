@@ -56,3 +56,10 @@ function min(a, b) {
 function min(a, b) {
  return a < b ? a : b;
 }
+
+function pow(x,n) {
+  x = prompt("Ввведите число X:");
+  n = prompt("Ввведите степень:");
+  return x**n;
+}
+
