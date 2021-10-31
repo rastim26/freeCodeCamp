@@ -22,4 +22,9 @@ function Calc(oper, a, b) {
   }
 }
 
-Calc("sum", 1, 3);
+Calc("sum", 8, 2);
+Calc("multi", 8, 2);
+Calc("sub", 8, 2);
+Calc("div", 8, 2);
+Calc("prc", 8, 2);
+Calc("stp", 8, 2);
