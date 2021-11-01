@@ -100,3 +100,14 @@ let num = prompt("Введите число большее 100:");
 while (num <= 100) {
   num = prompt("Введите число большее 100:");
 }
+
+let num;
+
+do {
+  num = prompt("Введите число, большее 100?", 0);
+} while (num <= 100 && num);
+
+let n = 10;
+for (let i = 2; i <= n; i++) {
+  if(i % j)
+}
