@@ -22,9 +22,9 @@ function Calc(oper, a, b) {
   }
 }
 
-Calc("sum", 8, 2);
-Calc("multi", 8, 2);
-Calc("sub", 8, 2);
-Calc("div", 8, 2);
-Calc("prc", 8, 2);
-Calc("stp", 8, 2);
+console.log(Calc("sum", 8, 2));
+console.log(Calc("multi", 8, 2));
+console.log(Calc("sub", 8, 2));
+console.log(Calc("div", 8, 2));
+console.log(Calc("prc", 8, 2));
+console.log(Calc("stp", 8, 2));
