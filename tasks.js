@@ -62,3 +62,11 @@ function pow(x, n) {
   n = prompt("Ввведите степень:");
   return x ** n;
 }
+
+// Циклы while и for
+
+let i = 3;
+
+while (i) {
+  alert(i--);
+} // 1
