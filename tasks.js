@@ -108,6 +108,9 @@ do {
 } while (num <= 100 && num);
 
 let n = 10;
-for (let i = 2; i <= n; i++) {
-  if(i % j)
-}
+for (let i = 2; i <= 10; i++) {
+  for (let j = 2; j < i; j++) {
+    if (i % j !== 0) console.log(i);
+    continue;
+  }
+} // ????????????????????
