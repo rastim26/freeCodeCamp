@@ -107,12 +107,16 @@ do {
   num = prompt("Введите число, большее 100?", 0);
 } while (num <= 100 && num);
 
+// ????????????????????
 let n = 10;
-for (let i = 2; i <= 10; i++) {
+first: for (let i = 2; i <= 10; i++) {
+  let sum;
   for (let j = 2; j < i; j++) {
-    if (i % j !== 0) console.log(i);
-    continue;
+    sum = i % j;
+    if (sum !== 0) if (sum === 0) continue first;
   }
+
+  if (sum) console.log(i);
 } // ????????????????????
 
 // Конструкция "switch"
@@ -133,7 +137,9 @@ switch (browser) {
     alert("We hope that this page looks ok!");
 }
 
-if (
+if (browser === "Edge") {
+  alert("You've got the Edge!");
+} else if (
   browser === "Chrome" ||
   browser === "Firefox" ||
   browser === "Safari" ||
@@ -142,4 +148,31 @@ if (
   alert("Okay we support these browsers too");
 } else {
   alert("We hope that this page looks ok!");
+}
+
+const number = +prompt("Введите число между 0 и 3", "");
+
+if (number === 0) {
+  alert("Вы ввели число 0");
+}
+
+if (number === 1) {
+  alert("Вы ввели число 1");
+}
+
+if (number === 2 || number === 3) {
+  alert("Вы ввели число 2, а может и 3");
+}
+
+switch (number) {
+  case 0:
+    alert("Вы ввели число 0");
+    break;
+  case 1:
+    alert("Вы ввели число 1");
+    break;
+  case 2:
+  case 3:
+    alert("Вы ввели число 2, а может и 3");
+    break;
 }
