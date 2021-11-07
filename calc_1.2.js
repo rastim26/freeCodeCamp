@@ -14,11 +14,9 @@ function Calc(oper, a, b) {
     stp: a ** b,
   };
 
-  let res = obj[oper];
-
   if (!(oper in obj)) return "Unknown operation";
 
-  return res;
+  return obj[oper];
 }
 
 console.log(Calc("sum", 8, 2));
