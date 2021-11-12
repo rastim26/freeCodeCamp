@@ -375,3 +375,18 @@ function ucFirst(str) {
 }
 
 console.log(ucFirst("вася"));
+
+// other solutions
+ucFirst("вася") == "Вася";
+// 1
+let newStr = str[0].toUpperCase() + str.slice(1);
+
+// 2
+let newStr = str.charAt(0).toUpperCase() + str.slice(1);
+
+// 3
+function ucFirst(str) {
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}
+alert(ucFirst("вася")); // Вася
