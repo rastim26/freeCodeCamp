@@ -390,3 +390,18 @@ function ucFirst(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 alert(ucFirst("вася")); // Вася
+
+// 2 Проверка на спам
+// важность: 5
+// Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
+
+// Функция должна быть нечувствительна к регистру:
+
+function checkSpam(str) {
+  str = str.toLowerCase();
+  return str.includes("viagra") || str.includes("xxx");
+}
+
+console.log(checkSpam("buy ViAgRA now"));
+console.log(checkSpam("free xxxxx"));
+console.log(checkSpam("innocent rabbit"));
