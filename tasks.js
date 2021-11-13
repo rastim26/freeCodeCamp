@@ -398,10 +398,31 @@ alert(ucFirst("вася")); // Вася
 // Функция должна быть нечувствительна к регистру:
 
 function checkSpam(str) {
-  str = str.toLowerCase();
-  return str.includes("viagra") || str.includes("xxx");
+  let lowerStr = str.toLowerCase();
+  return lowerStr.includes("viagra") || lowerStr.includes("xxx");
 }
 
 console.log(checkSpam("buy ViAgRA now"));
 console.log(checkSpam("free xxxxx"));
 console.log(checkSpam("innocent rabbit"));
+
+// Усечение строки
+// важность: 5
+// Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так, чтобы её длина стала равна maxlength.
+
+// Результатом функции должна быть та же строка, если усечение не требуется, либо, если необходимо, усечённая строка.
+
+// Например:
+
+// truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) = "Вот, что мне хотело…"
+
+// truncate("Всем привет!", 20) = "Всем привет!"
+
+function truncate(str, maxlength) {
+  return str.substr(0, maxlength - 1) + "…";
+}
+console.log(truncate("Вот, чт", 20));
+// друг
+function truncate(str, maxlength) {
+  return str.length > maxlength ? str.slice(0, maxlength - 1) + "…" : str;
+}
