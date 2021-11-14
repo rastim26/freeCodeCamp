@@ -426,3 +426,28 @@ console.log(truncate("Вот, чт", 20));
 function truncate(str, maxlength) {
   return str.length > maxlength ? str.slice(0, maxlength - 1) + "…" : str;
 }
+
+// Выделить число
+// важность: 4
+// Есть стоимость в виде строки "$120". То есть сначала идёт знак валюты, а затем – число.
+
+// Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+
+// Например:
+//alert( extractCurrencyValue('$120') === 120 ); // true
+
+console.log(extractCurrencyValue("$120"));
+console.log(extractCurrencyValue("по 10000 руб."));
+
+function extractCurrencyValue(str) {
+  let numStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (String(+str[i]) === "NaN") continue;
+    if (str[i] === " ") continue;
+
+    numStr += str[i];
+  }
+
+  return numStr;
+}
