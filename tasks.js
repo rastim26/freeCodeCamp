@@ -451,3 +451,40 @@ function extractCurrencyValue(str) {
 
   return numStr;
 }
+
+// #26.2 Вертикальная строка
+
+// Напишите функцию которая преобразует полученную строку в "вертикальный вид" и выводит ее в консоль. Чтобы получилось вот так:
+
+// showVerticalMessage('марафон')
+
+// М
+// а
+// р
+// а
+// ф
+// о
+// н
+
+// Если строка начинается с буквы "м" - нужно вывести эту строку с первой заглавной буквой
+
+// Если строка больше 10 символов - вывести только первые 10
+
+console.log(showVerticalMessage("марафон"));
+console.log(showVerticalMessage("громофон"));
+
+function showVerticalMessage(str) {
+  let fLetter = "";
+  let newStr = "";
+  if (str.length > 10) str = str.slice(0, 10);
+
+  for (let char of str) {
+    if (i === 0 && str[i] === "м") {
+      fLetter = str[0].toUpperCase() + "\n";
+      continue;
+    }
+    newStr += str[i] + "\n";
+  }
+  str = fLetter + newStr;
+  return str;
+}
