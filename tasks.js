@@ -589,3 +589,26 @@ function sumInput() {
   return sum;
 }
 sumInput();
+
+// Переведите текст вида border-left-width в borderLeftWidth
+
+function camelize(str) {
+  let arr = str.split("");
+
+  arr.map((item, index) => {
+    if (item === "-") {
+      arr.splice(index, 1);
+      arr[index] = arr[index].toUpperCase();
+    }
+  });
+  str = arr.join("");
+  return str;
+}
+
+console.log(
+  camelize("background-color") == "backgroundColor",
+  camelize("list-style-image") == "listStyleImage",
+  camelize("-webkit-transition") == "WebkitTransition"
+);
+
+// node main.js
