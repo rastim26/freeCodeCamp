@@ -611,4 +611,16 @@ console.log(
   camelize("-webkit-transition") == "WebkitTransition"
 );
 
-// node main.js
+// Фильтрация по диапазону
+
+let arr = [5, 3, 8, 1];
+
+function filterRange(arr, a, b) {
+  return arr.slice(a, b);
+}
+
+let filtered = filterRange(arr, 1, 4);
+
+alert(filtered); // 3,1 (совпадающие значения)
+
+alert(arr); // 5,3,8,1 (без изменений)
