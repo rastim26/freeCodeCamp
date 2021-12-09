@@ -624,3 +624,88 @@ let filtered = filterRange(arr, 1, 4);
 alert(filtered); // 3,1 (совпадающие значения)
 
 alert(arr); // 5,3,8,1 (без изменений)
+
+let schedule = {};
+
+function isEmpty(obj) {
+  for (let prop in obj) {
+    return false;
+  }
+  return true;
+}
+
+console.log(isEmpty(schedule)); // true
+
+schedule["8:30"] = "get up";
+
+console.log(isEmpty(schedule)); // false
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+let sum = 0;
+for (let person in salaries) {
+  sum += salaries[person];
+}
+console.log(sum);
+
+// до вызова функции
+
+function multiplyNumeric(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number") {
+      obj[prop] *= 2;
+    }
+  }
+}
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
+
+multiplyNumeric(menu);
+
+// после вызова функции
+console.log(menu);
+
+let calculator = {
+  read() {
+    this.a = +prompt("Введите значение a:", 0);
+    this.b = +prompt("Введите значение b:", 0);
+  },
+  sum() {
+    return this.a + this.b;
+  },
+  mul() {
+    return this.a * this.b;
+  },
+};
+
+calculator.read();
+
+console.log(calculator.sum());
+console.log(calculator.mul());
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function () {
+    // показывает текущую ступеньку
+    alert(this.step);
+    return this;
+  },
+};
+
+ladder.up().up().up().up().down().up().down().showStep(); // 1
