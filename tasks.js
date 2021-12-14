@@ -767,3 +767,23 @@ let sorted = copySorted(arr);
 
 console.log(sorted); // CSS, HTML, JavaScript
 console.log(arr); // HTML, JavaScript, CSS (без изменений)
+
+// Фильтрация по диапазону "на месте"
+
+function filterRangeInPlace(arr, a, b) {
+  array = arr.filter((item) => a <= item && item <= b);
+}
+
+let array = [5, 3, 8, 1];
+
+filterRangeInPlace(array, 1, 4); // удалены числа вне диапазона 1..4
+
+console.log(array); // [3, 1]
+
+// Сортировать в порядке по убыванию
+
+let arr = [5, 2, 1, -10, 8];
+
+arr.sort((a, b) => b - a);
+
+console.log(arr);
