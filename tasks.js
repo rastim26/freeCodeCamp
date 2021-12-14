@@ -728,3 +728,42 @@ console.log(random(1, 5)); // 4.3435234525
 function random(min, max) {
   return min + Math.random() * (max - min);
 }
+
+// Переведите текст вида border-left-width в borderLeftWidth
+function camelize(str) {
+  return str
+    .split("-")
+    .map((item, index) =>
+      index == 0 ? item : item[0].toUpperCase() + item.slice(1)
+    )
+    .join("");
+}
+
+console.log(camelize("background-color"));
+
+// Фильтрация по диапазону
+
+let arr = [5, 3, 8, 1];
+
+function filterRange(arr, a, b) {
+  return arr.filter((item) => a <= item && item <= b);
+}
+
+let filtered = filterRange(arr, 1, 4);
+
+console.log(filtered); // 3,1 (совпадающие значения)
+
+console.log(arr); // 5,3,8,1 (без изменений)
+
+// Скопировать и отсортировать массив
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(arr); // HTML, JavaScript, CSS (без изменений)
