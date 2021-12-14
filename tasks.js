@@ -709,3 +709,22 @@ let ladder = {
 };
 
 ladder.up().up().up().up().down().up().down().showStep(); // 1
+
+// Случайное число от min до max
+
+function random(min, max) {
+  let num;
+  while (true) {
+    num = Math.round(Math.random() * 10);
+    if (num > min && num <= max) return num;
+  }
+}
+
+console.log(random(1, 5)); // 1.2345623452
+console.log(random(1, 5)); // 3.7894332423
+console.log(random(1, 5)); // 4.3435234525
+
+// образец
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
