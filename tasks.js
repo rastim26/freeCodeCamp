@@ -787,3 +787,50 @@ let arr = [5, 2, 1, -10, 8];
 arr.sort((a, b) => b - a);
 
 console.log(arr);
+
+// Создать расширяемый калькулятор
+
+function Calculator() {
+  this.methods = {
+    "+": (a, b) => a + b,
+    "-": (a, b) => a - b,
+  };
+  this.calculate = function (str) {
+    let split = str.split(" "),
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) return NaN;
+
+    return this.methods[op](a, b);
+  };
+
+  this.addMethod = (name, func) => (this.methods[name] = func);
+}
+
+let calc = new Calculator();
+
+console.log(calc.calculate("3 + 7")); // 10
+
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+console.log(result); // 8
+
+// Трансформировать в массив имён
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let users = [vasya, petya, masha];
+let test = [];
+users.map((item) => test.push(item.name));
+
+let names = test.join(", ");
+
+console.log(names); // Вася, Петя, Маша
