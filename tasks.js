@@ -882,3 +882,64 @@ console.log(arr);
 // alert(arr[0].name); // Вася
 // alert(arr[1].name); // Маша
 // alert(arr[2].name); // Петя
+
+// Перемешайте массив
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+let arr = [1, 2, 3];
+
+shuffle(arr);
+console.log(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr);
+console.log(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+console.log(arr);
+// arr = [3, 1, 2]
+// ...
+
+// Получить средний возраст
+
+function getAverageAge(users) {
+  return users.reduce((sum, current) => sum + current.age, 0) / arr.length;
+}
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [vasya, petya, masha];
+
+console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
+
+// Оставить уникальные элементы массива
+
+function unique(arr) {
+  let res = [];
+
+  for (let str of arr) {
+    if (!res.includes(str)) res.push(str);
+  }
+
+  return res;
+}
+
+let strings = [
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
+];
+
+console.log(unique(strings)); // кришна, харе, :-O
