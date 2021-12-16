@@ -474,18 +474,19 @@ console.log(showVerticalMessage("марафон"));
 console.log(showVerticalMessage("громофон"));
 
 function showVerticalMessage(str) {
-  let fLetter = "";
-  let newStr = "";
+  let firstLetter = "";
+  let restStr = "";
+
   if (str.length > 10) str = str.slice(0, 10);
 
-  for (let char of str) {
+  for (let i = 0; i < str.length; i++) {
     if (i === 0 && str[i] === "м") {
-      fLetter = str[0].toUpperCase() + "\n";
+      firstLetter = str[0].toUpperCase() + "\n";
       continue;
     }
-    newStr += str[i] + "\n";
+    restStr += str[i] + "\n";
   }
-  str = fLetter + newStr;
+  str = firstLetter + restStr;
   return str;
 }
 
