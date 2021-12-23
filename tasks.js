@@ -958,3 +958,23 @@ console.log(sum(5)(-1));
 
 // sum(1)(2) = 3;
 // sum(5)(-1) = 4;
+
+// Фильтрация с помощью функции
+
+function inBetween(a, b) {
+  return function (item) {
+    return a <= item && item <= b;
+  };
+}
+
+function inArray(array) {
+  return function (Item) {
+    return array.includes(Item);
+  };
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(arr.filter(inBetween(3, 6)));
+
+console.log(arr.filter(inArray([1, 2, 10]))); // 1,2
