@@ -982,9 +982,10 @@ console.log(arr.filter(inArray([1, 2, 10]))); // 1,2
 // Сортировать по полю
 
 function byField(arg) {
-  return function (a, b) {
-    return a[arg] > b[arg] ? 1 : -1;
-  };
+  // return function (a, b) {
+  //   return a[arg] > b[arg] ? 1 : -1;
+  // };
+  return (a, b) => (a[arg] > b[arg] ? 1 : -1);
 }
 
 let users = [
