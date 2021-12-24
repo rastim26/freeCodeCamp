@@ -1018,3 +1018,28 @@ let army = makeArmy();
 army[0](); // у 0-го стрелка будет номер 10
 army[5](); // и у 5-го стрелка тоже будет номер 10
 // ... у всех стрелков будет номер 10, вместо 0, 1, 2, 3...
+
+function buildFun(n) {
+  let res = [];
+
+  for (var i = 0; i < n; i++) {
+    let j = i;
+    res.push(function () {
+      console.log(j);
+      return j;
+    });
+  }
+  return res;
+}
+
+console.log(buildFun(10));
+
+// describe("Tests", () => {
+//   it("test", () => {
+//     for (var i = 0; i < 10; i++) {
+//       Test.assertEquals(buildFun(10)[i](), i);
+//     }
+//   });
+// });
+
+console.log(buildFun(10)[4]());
