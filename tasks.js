@@ -1043,3 +1043,45 @@ console.log(buildFun(10));
 // });
 
 console.log(buildFun(10)[4]());
+
+function getAverage(marks) {
+  //TODO : calculate the downward rounded average of the marks array
+  let sum = marks.reduce((sum, current) => sum + current);
+  return Math.floor(sum / marks.length);
+}
+
+console.log(getAverage([2, 2, 2, 2]));
+console.log(getAverage([1, 2, 3, 4, 5]));
+console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2]));
+console.log(getAverage([1, 5, 87, 45, 8, 8]));
+console.log(
+  getAverage([4, 6, 13, 5, 19, 5, 10, 15, 13, 15, 15, 14, 11, 12, 17])
+);
+
+// setInterval
+function printNumbers(from, to) {
+  let i = from;
+  let timerId = setInterval(() => {
+    console.log(i);
+    if (i === to) clearInterval(timerId);
+    i++;
+  }, 1000);
+}
+
+printNumbers(1, 5);
+
+// setTimeout
+function printNumbers(from, to) {
+  let i = from;
+
+  setTimeout(function run() {
+    console.log(i);
+
+    let timerId = setTimeout(run, 1000);
+
+    if (i === to) clearTimeout(timerId);
+    i++;
+  }, 1000);
+}
+
+printNumbers(1, 5);
