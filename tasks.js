@@ -1085,3 +1085,24 @@ function printNumbers(from, to) {
 }
 
 printNumbers(1, 5);
+
+// Введение в браузер
+
+let close = document.getElementById("close");
+let open = document.getElementById("open");
+let list = document.getElementById("list");
+let isListOpen = false;
+
+let run = function () {
+  isListOpen = !isListOpen;
+
+  if (isListOpen) {
+    close.style.display = "none";
+    open.style.display = "inline";
+    list.style.display = "block";
+  } else {
+    close.style.display = "inline";
+    open.style.display = "none";
+    list.style.display = "none";
+  }
+};
