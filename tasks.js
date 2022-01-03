@@ -1106,3 +1106,22 @@ let run = function () {
     list.style.display = "none";
   }
 };
+
+// Добавить кнопку закрытия
+
+let cls = document.querySelectorAll(".remove-button");
+let remove = function (idx) {
+  cls[idx].parentElement.style.display = "none";
+};
+
+// Считаем потомков
+
+// ... ваш код...
+// let arr = document.querySelectorAll('li');
+let arr = document.querySelectorAll("li");
+
+arr.forEach((el) => {
+  let qnt = el.querySelectorAll("li").length;
+  let li = el.firstChild.data.trim();
+  alert(li + ": " + qnt);
+});
