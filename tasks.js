@@ -1116,7 +1116,6 @@ let remove = function (idx) {
 
 // Считаем потомков
 
-// ... ваш код...
 // let arr = document.querySelectorAll('li');
 let arr = document.querySelectorAll("li");
 
